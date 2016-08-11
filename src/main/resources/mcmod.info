@@ -1,0 +1,16 @@
+[
+    {
+        "modid": "gigafood",
+        "name": "GigaFood",
+        "description": "GigaFood is the continuation of MoreFood",
+        "version": "${version}",
+        "mcversion": "${mcversion}",
+        "url": "http://minecraft.curseforge.com/projects/gigafood",
+        "updateUrl": "",
+        "authorList": [ "Stefan Wimmer", "uriba" ],
+        "credits": "Copyright (c) 2016, Team Mion",
+        "logoFile": "logo.png",
+        "screenshots": [],
+        "dependencies": []
+    }
+]

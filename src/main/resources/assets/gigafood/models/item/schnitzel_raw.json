@@ -1,0 +1,6 @@
+{
+    "parent": "gigafood:item/_default",
+    "textures": {
+        "layer0": "gigafood:items/schnitzel_raw"
+    }
+}
