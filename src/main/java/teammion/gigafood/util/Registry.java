@@ -23,43 +23,22 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import teammion.gigafood.GigaFood;
+import teammion.mioncore.util.IItem;
 
 /**
  * Created on 11.08.16 at 14:49
  *
  * @author Stefan Wimmer <stefanwimmer128@gmail.com>
  */
-public class Registry extends GameRegistry
+public class Registry extends teammion.mioncore.util.Registry
 {
-    public static void addSmelting(Item in, ItemStack out)
-    {
-        addSmelting(in, out, .2f);
-    }
-    
-    public static void addSmelting(Block in, ItemStack out)
-    {
-        addSmelting(in, out, .2f);
-    }
-    
-    public static void addSmelting(ItemStack in, ItemStack out)
-    {
-        addSmelting(in, out, .2f);
-    }
-    
     public static void render(IItem item, int meta, String name)
     {
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(
-                item.item(), meta, new ModelResourceLocation(GigaFood.MODID + ":" + name, "inventory")
-        );
-    }
-    
-    public static void render(IItem item, int meta)
-    {
-        render(item, meta, item.item().getUnlocalizedName().substring(5));
+        render(item, meta, GigaFood.MODID, name);
     }
     
     public static void render(IItem item)
     {
-        render(item, 0);
+        render(item, 0, item.item().getUnlocalizedName().substring(5));
     }
 }

@@ -11,6 +11,6 @@
         "credits": "Copyright (c) 2016, Team Mion",
         "logoFile": "logo.png",
         "screenshots": [],
-        "dependencies": []
+        "dependencies": [ "mioncore" ]
     }
 ]

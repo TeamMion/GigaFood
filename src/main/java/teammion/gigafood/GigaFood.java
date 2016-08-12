@@ -28,7 +28,7 @@ import teammion.gigafood.proxy.Proxy;
  *
  * @author Stefan Wimmer <stefanwimmer128@gmail.com>
  */
-@Mod(modid = GigaFood.MODID)
+@Mod(modid = GigaFood.MODID, dependencies = "required-after:mioncore@[0.1.0,)")
 public class GigaFood
 {
     public static final String MODID = "gigafood";

@@ -19,6 +19,7 @@ package teammion.gigafood.item;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import teammion.mioncore.item.ItemFood;
 
 /**
  * Created on 11.08.16 at 17:39

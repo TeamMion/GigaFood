@@ -38,6 +38,26 @@ minecraft
 
 dependencies
 {
+    compile files("libs/mioncore_" + mcversion + "-" + mioncore + "-deobf.jar")
+}
+
+task deobfJar(type : Jar) {
+    from sourceSets.main.output
+    
+    classifier = "deobf"
+}
+
+task deobfSourceJar(type : Jar) {
+    from sourceSets.main.java
+    from sourceSets.main.resources
+    
+    classifier = "deobf-sources"
+}
+
+artifacts
+{
+    archives deobfJar
+    archives deobfSourceJar
 }
 
 processResources

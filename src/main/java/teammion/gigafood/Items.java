@@ -16,6 +16,7 @@
 
 package teammion.gigafood;
 
+import teammion.mioncore.item.*;
 import teammion.gigafood.item.*;
 import teammion.gigafood.util.Registry;
 
@@ -26,31 +27,31 @@ import teammion.gigafood.util.Registry;
  */
 public class Items extends net.minecraft.init.Items
 {
-    public static final Item APPLE_CHOCOLATE = new Item("apple_chocolate");
-    public static final ItemFood APPLE_CHOCOLATE_COATED = new ItemFood("apple_chocolate_coated", 8);
-    public static final Item BREAD_DOUGH = new Item("bread_dough");
-    public static final Item BREAD_SLICE = new Item("bread_slice");
-    public static final ItemFood CHOCOLATE = new ItemFood("chocolate", 8);
-    public static final ItemDrink CHOCOLATE_DRINK = new ItemDrink("chocolate_drink", 4);
-    public static final ItemFood CHOCOLATE_PIECE = new ItemFood("chocolate_piece", 1);
-    public static final Item COCOA_BEAN_GROUND = new Item("cocoa_bean_ground");
-    public static final Item COCOA_BEAN_ROASTED = new Item("cocoa_bean_roasted");
-    public static final ItemFood EGG_BOILED = new ItemFood("egg_boiled", 3);
-    public static final ItemFood FISH_STICK = new ItemFood("fish_stick", 6);
-    public static final Item FISH_STICK_RAW = new Item("fish_stick_raw");
-    public static final Item FLOUR = new Item("flour");
-    public static final ItemFood FRENCH_FRIES = new ItemFood("french_fries", 6);
-    public static final Item FRENCH_FRIES_RAW = new Item("french_fries_raw");
+    public static final Item APPLE_CHOCOLATE = item("apple_chocolate");
+    public static final ItemFood APPLE_CHOCOLATE_COATED = itemFood("apple_chocolate_coated", 8);
+    public static final Item BREAD_DOUGH = item("bread_dough");
+    public static final Item BREAD_SLICE = item("bread_slice");
+    public static final ItemFood CHOCOLATE = itemFood("chocolate", 8);
+    public static final ItemDrink CHOCOLATE_DRINK = itemDrink("chocolate_drink", 4);
+    public static final ItemFood CHOCOLATE_PIECE = itemFood("chocolate_piece", 1);
+    public static final Item COCOA_BEAN_GROUND = item("cocoa_bean_ground");
+    public static final Item COCOA_BEAN_ROASTED = item("cocoa_bean_roasted");
+    public static final ItemFood EGG_BOILED = itemFood("egg_boiled", 3);
+    public static final ItemFood FISH_STICK = itemFood("fish_stick", 6);
+    public static final Item FISH_STICK_RAW = item("fish_stick_raw");
+    public static final Item FLOUR = item("flour");
+    public static final ItemFood FRENCH_FRIES = itemFood("french_fries", 6);
+    public static final Item FRENCH_FRIES_RAW = item("french_fries_raw");
     public static final ItemMilkBottle MILK_BOTTLE = new ItemMilkBottle();
-    public static final ItemFood SANDWICH_CHICKEN = new ItemFood("sandwich_chicken", 5);
-    public static final ItemFood SANDWICH_FISH = new ItemFood("sandwich_fish", 5);
-    public static final ItemFood SANDWICH_PORKCHOP = new ItemFood("sandwich_porkchop", 5);
-    public static final ItemFood SANDWICH_SCHNITZEL = new ItemFood("sandwich_schnitzel", 5);
-    public static final ItemFood SCHNITZEL = new ItemFood("schnitzel", 4);
-    public static final Item SCHNITZEL_RAW = new Item("schnitzel_raw");
+    public static final ItemFood SANDWICH_CHICKEN = itemFood("sandwich_chicken", 5);
+    public static final ItemFood SANDWICH_FISH = itemFood("sandwich_fish", 5);
+    public static final ItemFood SANDWICH_PORKCHOP = itemFood("sandwich_porkchop", 5);
+    public static final ItemFood SANDWICH_SCHNITZEL = itemFood("sandwich_schnitzel", 5);
+    public static final ItemFood SCHNITZEL = itemFood("schnitzel", 4);
+    public static final Item SCHNITZEL_RAW = item("schnitzel_raw");
     public static final ItemStrawberry STRAWBERRY = new ItemStrawberry();
-    public static final Item STRAWBERRY_CHOCOLATE = new Item("strawberry_chocolate");
-    public static final ItemFood STRAWBERRY_CHOCOLATE_COATED = new ItemFood("strawberry_chocolate_coated", 8);
+    public static final Item STRAWBERRY_CHOCOLATE = item("strawberry_chocolate");
+    public static final ItemFood STRAWBERRY_CHOCOLATE_COATED = itemFood("strawberry_chocolate_coated", 8);
     
     public static void register()
     {
@@ -108,5 +109,20 @@ public class Items extends net.minecraft.init.Items
         Registry.render(STRAWBERRY);
         Registry.render(STRAWBERRY_CHOCOLATE);
         Registry.render(STRAWBERRY_CHOCOLATE_COATED);
+    }
+    
+    private static Item item(String name)
+    {
+        return new Item(name, CreativeTabs.ITEM);
+    }
+    
+    private static ItemFood itemFood(String name, int amount)
+    {
+        return new ItemFood(name, amount, CreativeTabs.ITEM_FOOD);
+    }
+    
+    private static ItemDrink itemDrink(String name, int amount)
+    {
+        return new ItemDrink(name, amount, CreativeTabs.ITEM_FOOD);
     }
 }
